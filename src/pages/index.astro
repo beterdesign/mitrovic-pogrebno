@@ -447,9 +447,9 @@
               <div class="footer-link-column">
                 <h3 class="footer-link-title">Linkovi</h3>
                 <div class="footer-link-block">
-                  <a href="/" aria-current="page" class="footer-link w--current">O nama</a>
-                  <a href="/about-us" class="footer-link">Usluge</a>
-                  <a href="/blog" class="footer-link">Česta pitanja</a>
+                  <a href="#o-nama" class="footer-link">O nama</a>
+                  <a href="#usluge" class="footer-link">Usluge</a>
+                  <a href="#cesta-pitanja" class="footer-link">Česta pitanja</a>
                 </div>
               </div>
               <div class="footer-contact-block">
@@ -472,6 +472,86 @@
       </div>
     </footer>
   </main>
+  <a href="tel:+381638783235" class="floating-call" aria-label="Pozovite nas: +381 63878-3235">
+    <span class="floating-call-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+    <span class="floating-call-text">
+      <span class="floating-call-label">Pozovite nas</span>
+      <span class="floating-call-number">+381 63878-3235</span>
+    </span>
+  </a>
+  <style is:inline>
+    .floating-call {
+      position: fixed;
+      right: max(24px, env(safe-area-inset-right));
+      bottom: max(24px, env(safe-area-inset-bottom));
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 22px 10px 10px;
+      border: 1px solid var(--color--primary-color-one);
+      border-radius: 999px;
+      background-color: var(--color--primary-color-one);
+      color: var(--color--white-color);
+      font-family: var(--font-family--body-font);
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+      transition: background-color .3s cubic-bezier(.445, .05, .55, .95), border-color .3s cubic-bezier(.445, .05, .55, .95);
+    }
+    .floating-call:hover {
+      border-color: var(--color--white-color);
+      background-color: var(--color--black-color);
+    }
+    .floating-call:focus-visible {
+      outline: 2px solid var(--color--primary-color-two);
+      outline-offset: 3px;
+    }
+    .floating-call-icon {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: rgba(249, 250, 250, .12);
+    }
+    .floating-call-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .floating-call-label {
+      font-size: 13px;
+      opacity: .8;
+    }
+    .floating-call-number {
+      font-size: 17px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    @media screen and (max-width: 991px) {
+      /* keep the footer credit clear of the floating button */
+      .footer {
+        padding-bottom: 96px;
+      }
+    }
+    @media screen and (max-width: 479px) {
+      .floating-call {
+        right: max(16px, env(safe-area-inset-right));
+        bottom: max(16px, env(safe-area-inset-bottom));
+        gap: 10px;
+        padding: 8px 18px 8px 8px;
+      }
+      .floating-call-icon {
+        width: 40px;
+        height: 40px;
+      }
+      .floating-call-number {
+        font-size: 16px;
+      }
+    }
+  </style>
   <script is:inline src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69a4300ef39ffe457fb9ea24" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script is:inline src="/js/webflow.js" type="text/javascript"></script>
   <script is:inline src="https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js" type="text/javascript"></script>
