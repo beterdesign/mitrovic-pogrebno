@@ -1,0 +1,9 @@
+// Cloudflare Workers static-assets deploy: serves the built Astro site from dist/.
+{
+  "name": "mitrovic-pogrebno",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash"
+  }
+}
