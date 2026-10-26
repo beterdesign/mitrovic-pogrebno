@@ -2,8 +2,15 @@
 {
   "name": "mitrovic-pogrebno",
   "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash"
-  }
+  },
+  // apex is the primary host (as on Webflow); www should 301 to it via a zone redirect rule
+  "routes": [
+    { "pattern": "pogrebnomitrovic.com", "custom_domain": true },
+    { "pattern": "www.pogrebnomitrovic.com", "custom_domain": true }
+  ]
 }
